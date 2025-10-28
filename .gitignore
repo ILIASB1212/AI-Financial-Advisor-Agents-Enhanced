@@ -1,0 +1,30 @@
+Virtual Environment
+
+.venv
+venv/
+env/
+
+Environment Variables (API Keys, Secrets)
+
+.env
+
+Python specific files
+
+pycache/
+*.pyc
+*.pyo
+*.pyd
+
+Operating System Files
+
+.DS_Store
+Thumbs.db
+
+SEC Edgar Downloader Temporary Directories (if not cleaned up)
+
+sec_filings_temp/
+
+Docker/Build Ignorables (Optional, but safe)
+
+!Dockerfile
+!docker-compose.yml
