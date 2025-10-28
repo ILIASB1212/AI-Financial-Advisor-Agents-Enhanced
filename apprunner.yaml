@@ -1,13 +1,16 @@
-
 version: 1.0
+runtime: python311
 
-# Use Dockerfile for building
-runtime: docker
-
-# Build configuration
 build:
-  dockerfile: Dockerfile
+  commands:
+    build:
+      - pip install -r requirements.txt
 
-# Run configuration  
 run:
-  port: 8501
+  command: streamlit run app.py --server.port 8501 --server.address 0.0.0.0
+  network:
+    port: 8501
+    env: APP_PORT
+  env:
+    - name: APP_PORT
+      value: "8501"
