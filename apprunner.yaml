@@ -1,8 +1,13 @@
-runtime: image
 
-image:
-  image_repository_type: ECR_PUBLIC
-  port: 8501
+version: 1.0
 
+# Use Dockerfile for building
+runtime: docker
+
+# Build configuration
+build:
+  dockerfile: Dockerfile
+
+# Run configuration  
 run:
-  start_command: streamlit run app.py
+  port: 8501
