@@ -84,7 +84,7 @@ if start_button and query:
                     client_profile_result = await Runner.run(
                         Financial_Profiler_Agent, 
                         f"Client Investment Goal: {query}",
-                        max_turns=5
+                        max_turns=20
                     )
                     
                     client_profile = client_profile_result.final_output
@@ -123,7 +123,7 @@ if start_button and query:
                     market_research_result = await Runner.run(
                         financial_analyst, 
                         market_research_prompt,
-                        max_turns=20
+                        max_turns=40
                     )
                     
                     market_research = market_research_result.final_output
@@ -164,7 +164,7 @@ if start_button and query:
                     stock_analysis_result = await Runner.run(
                         chief_risk_officer_agent, 
                         stock_analysis_prompt,
-                        max_turns=80  # Increased for multiple stock lookups
+                        max_turns=100  # Increased for multiple stock lookups
                     )
                     
                     stock_candidates = stock_analysis_result.final_output
@@ -213,7 +213,7 @@ if start_button and query:
                     risk_assessment_result = await Runner.run(
                         risk_management_specialist, 
                         risk_assessment_prompt,
-                        max_turns=50  # Increased for SEC filing searches per stock
+                        max_turns=100  # Increased for SEC filing searches per stock
                     )
                     
                     risk_vetted_stocks = risk_assessment_result.final_output
@@ -258,7 +258,7 @@ if start_button and query:
                     portfolio_result = await Runner.run(
                         portfolio_manager_agent, 
                         portfolio_allocation_prompt,
-                        max_turns=30
+                        max_turns=60
                     )
                     
                     portfolio_allocation = portfolio_result.final_output
@@ -307,7 +307,7 @@ if start_button and query:
                     final_report_result = await Runner.run(
                         final_report_agent, 
                         final_report_prompt,
-                        max_turns=10
+                        max_turns=30
                     )
                     
                     final_report = final_report_result.final_output
