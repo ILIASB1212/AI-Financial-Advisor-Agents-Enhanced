@@ -1,9 +1,8 @@
-runtime: python3
+runtime: image
 
-build:
-  commands:
-    - pip install -r requirements.txt
+image:
+  image_repository_type: ECR_PUBLIC
+  port: 8501
 
 run:
-  port: 8501
   start_command: streamlit run app.py
