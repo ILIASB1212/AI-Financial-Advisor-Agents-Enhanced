@@ -1,0 +1,15 @@
+openai
+pydantic
+python-dotenv
+pandas
+yfinance
+sec-edgar-downloader
+alpha-vantage
+google-api-python-client
+streamlit
+pyyaml
+openai-agents
+
+
+
+
