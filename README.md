@@ -14,16 +14,16 @@ Python 3.10+Docker and Docker ComposeAPI Keys for the following services (requir
 ├── Dockerfile
 └── requirements.txt
 
-#### 3. Configure Environment VariablesCreate a file named .env in the root directory (where docker-compose.yml is located) and populate it with your API keys.# .env
-OPENAI_API_KEY="sk-..."
-GOOGLE_API_KEY="AIza..."
-AV_API_KEY="YOUR_ALPHA_VANTAGE_API_KEY"
+#### 2. Configure Environment VariablesCreate a file named .env in the root directory (where docker-compose.yml is located) and populate it with your API keys.# .env
+- OPENAI_API_KEY="sk-..."
+- GOOGLE_API_KEY="AIza..."
+- AV_API_KEY="YOUR_ALPHA_VANTAGE_API_KEY"
 
-#### 4. Build and Run the ContainerExecute the following commands from your project root directory:Build the Docker Image:docker-compose build
+#### 3. Build and Run the ContainerExecute the following commands from your project root directory:Build the Docker Image:docker-compose build
 
 Start the Application Container:docker-compose up -d
 
 The application will now be running in the background.
-#### 5. Access the ApplicationOpen your web browser and navigate to:http://localhost:8501
+#### 4. Access the ApplicationOpen your web browser and navigate to:http://localhost:8501
 
 🛑 Stopping the ApplicationTo stop the container and clean up the network:docker-compose down
